@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="cyu_exam"
+  id="myeclipse.1457360813398"
+  context-root="/cyu_exam"
+  j2ee-spec="5.0"
+  archive="cyu_exam.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
