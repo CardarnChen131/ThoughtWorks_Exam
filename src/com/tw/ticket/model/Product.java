@@ -1,13 +1,26 @@
 package com.tw.ticket.model;
 
+/**
+ * 产品的实体类
+ * @author cyu
+ * @since v1.0
+ */
 public class Product 
 {
-	private String name;
-	private String unit;
-	private String prices;
-	private String barcode;
-	private String rules;
+	private String name;//产品名
+	private String unit;//单位
+	private String prices;//单价
+	private String barcode;//条形码
+	private String rules;//打折规则，0是无，1是买二增一，2是95折
 	
+	/**
+	 * 用于测试的构造方法
+	 * @param name 名称
+	 * @param unit 单位
+	 * @param prices 单价
+	 * @param barcode 条码
+	 * @param rules 规则
+	 */
 	public Product(String name, String unit, String prices, String barcode,
 			String rules) 
 	{
