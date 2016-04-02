@@ -22,6 +22,9 @@ public class PrintTicketServicesImpl implements IPrintTicketServices
 	@Override
 	public Map<String, Integer> getProductInfo(String list) 
 	{
+		list = list.replaceAll("\\[", "");
+		list = list.replaceAll("\\]", "");
+		list = list.replaceAll("'", "");
 		String[] arr = list.split(",");
 		Map<String,Integer> itemMap = new HashMap<String, Integer>();
 		String itemName = "";
@@ -107,6 +110,8 @@ public class PrintTicketServicesImpl implements IPrintTicketServices
 		{
 			//获取实体
 			product = getProduct(arrItem[i]);
+			if(product!=null)
+			{
 			name = product.getName();
 			unit = product.getUnit();
 			prices = product.getPrices();
@@ -131,7 +136,7 @@ public class PrintTicketServicesImpl implements IPrintTicketServices
 				sb.append("，节省： "+totalDiscount +"(元)");
 			}
 			sb.append("\r\n");
-			
+			}
 		}
 		//买二赠一产品特殊打印地方
 		if(tempStr!="")
